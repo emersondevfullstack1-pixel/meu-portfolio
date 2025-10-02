@@ -60,7 +60,7 @@ const Hero = () => {
               >
                 Full Stack Development
               </Typography>
-              <Grid
+              {/* <Grid
                 container
                 display={"flex"}
                 justifyContent={"center"}
@@ -74,7 +74,7 @@ const Hero = () => {
                   display={"flex"}
                   justifyContent={"center"}
                 >
-                  <StyledButton>
+                  <StyledButton onClick={() => console.log("download")}>
                     <DownloadIcon />
                     <Typography>DONLOAD CV</Typography>
                   </StyledButton>
@@ -86,12 +86,12 @@ const Hero = () => {
                   display={"flex"}
                   justifyContent={"center"}
                 >
-                  <StyledButton>
+                  <StyledButton onClick={() => console.log("contact me")}>
                     <MailOutlineIcon />
                     <Typography>CONTANCT ME</Typography>
                   </StyledButton>
                 </Grid>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Grid>
         </Container>
