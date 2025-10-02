@@ -16,13 +16,12 @@ const NavBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const StyledToobar = styled(Toolbar)(() => ({
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
     alignItems: "center",
   }));
 
   // Itens do menu
-  const menuItems = ["About", "Skills", "Projects"];
-
+  const menuItems = ["Sobre", "Habilidades", "Projetos"];
   // Responsivo: mostra menu hamburguer em telas pequenas
   return (
     <>
@@ -32,7 +31,14 @@ const NavBar = () => {
             {menuItems.map((item) => (
               <MenuItem
                 key={item}
-                sx={{ display: { xs: "none", md: "block" } }}
+                sx={{
+                  display: {
+                    xs: "none",
+                    md: "block",
+                    margin: "top",
+                    padding: "20px 150px",
+                  },
+                }}
               >
                 {item}
               </MenuItem>
@@ -43,22 +49,33 @@ const NavBar = () => {
             edge="end"
             aria-label="menu"
             onClick={() => setDrawerOpen(true)}
-            sx={{ display: { xs: "block", md: "none" } }}
+            sx={{
+              display: {
+                xs: "block",
+                md: "none",
+                position: "fixed",
+                cursor: "pointer",
+                left: "20px",
+              },
+            }}
           >
             <MenuIcon />
           </IconButton>
         </StyledToobar>
       </AppBar>
       <Drawer
-        anchor="right"
+        anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         sx={{ display: { xs: "block", md: "none" } }}
+        PaperProps={{
+          sx: { backgroundColor: "#232323" }, //cor de fundo do menu-hamburguer
+        }}
       >
-        <List sx={{ width: 200 }}>
+        <List sx={{ width: 150 }}>
           {menuItems.map((item) => (
-            <ListItem button key={item} onClick={() => setDrawerOpen(false)}>
-              <ListItemText primary={item} />
+            <ListItem key={item} onClick={() => setDrawerOpen(false)}>
+              <ListItemText primary={item} sx={{ color: "#FFF" }} />
             </ListItem>
           ))}
         </List>
