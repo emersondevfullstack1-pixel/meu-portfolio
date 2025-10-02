@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 
 interface StyledButtonProps {
   children: ReactNode;
+  onClick: () => void;
 }
 
 const StyledButtonRoot = styled("button")(({ theme }) => ({
@@ -21,8 +22,8 @@ const StyledButtonRoot = styled("button")(({ theme }) => ({
   },
 }));
 
-const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
-  return <StyledButtonRoot>{children}</StyledButtonRoot>;
+const StyledButton: React.FC<StyledButtonProps> = ({ onClick, children }) => {
+  return <StyledButtonRoot onClick={onClick}>{children}</StyledButtonRoot>;
 };
 
 export default StyledButton;
