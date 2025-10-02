@@ -58,40 +58,42 @@ const Hero = () => {
                 textAlign="center"
                 pb={2}
               >
-                Full Stack Development
+                Full Stack Develop
               </Typography>
-              {/* <Grid
-                container
-                display={"flex"}
-                justifyContent={"center"}
-                spacing={3}
-                pb={3}
-              >
+              {
                 <Grid
-                  item
-                  xs={12}
-                  md={4}
+                  container
                   display={"flex"}
                   justifyContent={"center"}
+                  spacing={3}
+                  pb={3}
                 >
-                  <StyledButton onClick={() => console.log("download")}>
-                    <DownloadIcon />
-                    <Typography>DONLOAD CV</Typography>
-                  </StyledButton>
+                  <Grid
+                    item
+                    xs={12}
+                    md={4}
+                    display={"flex"}
+                    justifyContent={"center"}
+                  >
+                    <StyledButton onClick={() => console.log("download")}>
+                      <DownloadIcon />
+                      <Typography>DONLOAD CV</Typography>
+                    </StyledButton>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    md={4}
+                    display={"flex"}
+                    justifyContent={"center"}
+                  >
+                    <StyledButton onClick={() => console.log("contact me")}>
+                      <MailOutlineIcon />
+                      <Typography>CONTANCT ME</Typography>
+                    </StyledButton>
+                  </Grid>
                 </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  md={4}
-                  display={"flex"}
-                  justifyContent={"center"}
-                >
-                  <StyledButton onClick={() => console.log("contact me")}>
-                    <MailOutlineIcon />
-                    <Typography>CONTANCT ME</Typography>
-                  </StyledButton>
-                </Grid>
-              </Grid> */}
+              }
             </Grid>
           </Grid>
         </Container>
