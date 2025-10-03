@@ -1,82 +1,91 @@
 import {
   AppBar,
-  MenuItem,
   Toolbar,
-  styled,
   IconButton,
   Drawer,
   List,
   ListItem,
   ListItemText,
+  MenuItem,
+  Box,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+import { styled } from "@mui/material/styles";
+import { Link } from "react-scroll"; // 👈 Importa o Link do react-scroll
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: theme.spacing(2),
+}));
 
 const NavBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const StyledToobar = styled(Toolbar)(() => ({
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }));
-
-  // Itens do menu
   const menuItems = ["Sobre", "Habilidades", "Projetos"];
-  // Responsivo: mostra menu hamburguer em telas pequenas
+
   return (
     <>
-      <AppBar position="absolute">
-        <StyledToobar>
-          <div className="nav-menu" style={{ display: "flex", gap: 16 }}>
+      <AppBar position="fixed" sx={{ backgroundColor: "#232323" }}>
+        <StyledToolbar>
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              gap: 60,
+              justifyContent: "center",
+            }}
+          >
             {menuItems.map((item) => (
-              <MenuItem
+              <Link
                 key={item}
-                sx={{
-                  display: {
-                    xs: "none",
-                    md: "block",
-                    margin: "top",
-                    padding: "20px 150px",
-                  },
-                }}
+                to={item.toLowerCase()}
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-70}
               >
-                {item}
-              </MenuItem>
+                <MenuItem sx={{ color: "#fff", cursor: "pointer" }}>
+                  {item}
+                </MenuItem>
+              </Link>
             ))}
-          </div>
+          </Box>
+
           <IconButton
             color="inherit"
             edge="end"
             aria-label="menu"
             onClick={() => setDrawerOpen(true)}
-            sx={{
-              display: {
-                xs: "block",
-                md: "none",
-                position: "fixed",
-                cursor: "pointer",
-                left: "20px",
-              },
-            }}
+            sx={{ display: { xs: "block", md: "none" } }}
           >
             <MenuIcon />
           </IconButton>
-        </StyledToobar>
+        </StyledToolbar>
       </AppBar>
+
       <Drawer
         anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        sx={{ display: { xs: "block", md: "none" } }}
         PaperProps={{
-          sx: { backgroundColor: "#232323" }, //cor de fundo do menu-hamburguer
+          sx: { backgroundColor: "#232323", width: 200 },
         }}
       >
-        <List sx={{ width: 150 }}>
+        <List>
           {menuItems.map((item) => (
-            <ListItem key={item} onClick={() => setDrawerOpen(false)}>
-              <ListItemText primary={item} sx={{ color: "#FFF" }} />
-            </ListItem>
+            <Link
+              key={item}
+              to={item.toLowerCase()}
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-70}
+              onClick={() => setDrawerOpen(false)}
+            >
+              <ListItem button>
+                <ListItemText primary={item} sx={{ color: "#fff" }} />
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Drawer>

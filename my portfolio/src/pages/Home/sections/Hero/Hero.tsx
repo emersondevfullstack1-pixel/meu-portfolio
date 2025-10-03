@@ -14,12 +14,12 @@ const Hero = () => {
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.up("xs")]: {
-      // <= mobile
+      // <= mobile e acima
       paddingTop: "100px",
     },
     [theme.breakpoints.up("md")]: {
-      //=> mobile
-      PaddingTop: "0",
+      //=> tablet e acima
+      paddingTop: "0",
     },
   }));
 
@@ -60,40 +60,38 @@ const Hero = () => {
               >
                 Full Stack Develop
               </Typography>
-              {
+              <Grid
+                container
+                display={"flex"}
+                justifyContent={"center"}
+                spacing={3}
+                pb={3}
+              >
                 <Grid
-                  container
+                  item
+                  xs={12}
+                  md={4}
                   display={"flex"}
                   justifyContent={"center"}
-                  spacing={3}
-                  pb={3}
                 >
-                  <Grid
-                    item
-                    xs={12}
-                    md={4}
-                    display={"flex"}
-                    justifyContent={"center"}
-                  >
-                    <StyledButton onClick={() => console.log("download")}>
-                      <DownloadIcon />
-                      <Typography>DONLOAD CV</Typography>
-                    </StyledButton>
-                  </Grid>
-                  <Grid
-                    item
-                    xs={12}
-                    md={4}
-                    display={"flex"}
-                    justifyContent={"center"}
-                  >
-                    <StyledButton onClick={() => console.log("contact me")}>
-                      <MailOutlineIcon />
-                      <Typography>CONTANCT ME</Typography>
-                    </StyledButton>
-                  </Grid>
+                  <StyledButton onClick={() => console.log("download")}>
+                    <DownloadIcon />
+                    <Typography>DONLOAD CV</Typography>
+                  </StyledButton>
                 </Grid>
-              }
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  display={"flex"}
+                  justifyContent={"center"}
+                >
+                  <StyledButton onClick={() => console.log("contact me")}>
+                    <MailOutlineIcon />
+                    <Typography>CONTANCT ME</Typography>
+                  </StyledButton>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
