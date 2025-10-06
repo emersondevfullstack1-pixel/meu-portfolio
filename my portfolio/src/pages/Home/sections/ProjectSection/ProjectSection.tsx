@@ -3,6 +3,8 @@ import ProjectCard, {
   type ProjectCardProps,
 } from "../../../../components/ProjectCard/ProjectCard";
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
+import tasklistImg from "../../../../../public/CV/tasklist.png";
+tasklistImg;
 
 const ProjectsSection: React.FC = () => {
   const StyledExperience = styled("div")(({ theme }) => ({
