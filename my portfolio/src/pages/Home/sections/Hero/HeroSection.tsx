@@ -5,7 +5,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { Grid } from "@mui/material";
 import StyledButton from "../../../../components/Styledbutton/StyledButton";
-import { AnimatedBackground } from "../../../../components/AnimatedBackground";
+import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
 
 const Hero = () => {
   const StyledHero = styled("div")(({ theme }) => ({
@@ -58,7 +58,7 @@ const Hero = () => {
                 textAlign="center"
                 pb={2}
               >
-                Full Stack Develop
+                Full Stack Developer
               </Typography>
               <Grid
                 container
@@ -74,9 +74,18 @@ const Hero = () => {
                   display={"flex"}
                   justifyContent={"center"}
                 >
-                  <StyledButton onClick={() => console.log("download")}>
+                  <StyledButton
+                    onClick={() => {
+                      const link = document.createElement("a");
+                      link.href = "public/CV/emerson_CV.pdf"; // caminho do seu arquivo
+                      link.download = "Emerson_CV.pdf"; // nome do arquivo ao baixar
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
                     <DownloadIcon />
-                    <Typography>DONLOAD CV</Typography>
+                    <Typography>DOWNLOAD CV</Typography>
                   </StyledButton>
                 </Grid>
                 <Grid
@@ -86,9 +95,13 @@ const Hero = () => {
                   display={"flex"}
                   justifyContent={"center"}
                 >
-                  <StyledButton onClick={() => console.log("contact me")}>
+                  <StyledButton
+                    onClick={() =>
+                      window.open("https://wa.me/5583987774076", "_blank")
+                    }
+                  >
                     <MailOutlineIcon />
-                    <Typography>CONTANCT ME</Typography>
+                    <Typography>CONTACT ME</Typography>
                   </StyledButton>
                 </Grid>
               </Grid>
@@ -99,5 +112,4 @@ const Hero = () => {
     </>
   );
 };
-
 export default Hero;

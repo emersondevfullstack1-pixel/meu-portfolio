@@ -1,12 +1,18 @@
-import Home from "./pages/Home/Home";
-import theme from "./theme";
-import { ThemeProvider } from "@mui/material";
+import AboutSection from "./pages/Home/sections/AboutSection/AboutSection";
+import HeroSection from "./pages/Home/sections/Hero/HeroSection";
+import Navbar from "./components/NavBar/NavBar";
+import ProjectsSection from "./pages/Home/sections/ProjectSection/ProjectSection";
+import Footer from "./components/Footer/Footer";
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Home />
-    </ThemeProvider>
+    <>
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <ProjectsSection />
+      <Footer />
+    </>
   );
 };
 
