@@ -13,7 +13,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Lista de tarefas",
       subtitle: "August 2025 - September 2025",
-      srcImg: "public/ImgProject/tasklist.png",
+      srcImg: "/CV/tasklist.png",
       description:
         "Um sistema de Lista de Tarefas que ajudar o usuário na sua organização de tarefas, compromissos e demandas do dia a dia.",
       technologies: "REACT, TYPESCRIPT, JAVASCRIPT",
