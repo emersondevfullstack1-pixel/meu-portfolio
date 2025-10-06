@@ -17,10 +17,10 @@ const AboutSection: React.FC = () => {
     "Javascript",
     "Typescript",
     "React",
+    "Node.JS",
     "Git",
     "HTML",
     "CSS",
-    "Material UI",
   ];
 
   return (
