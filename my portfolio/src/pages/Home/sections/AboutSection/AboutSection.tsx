@@ -19,8 +19,7 @@ const AboutSection: React.FC = () => {
     "React",
     "Node.JS",
     "Git",
-    "HTML",
-    "CSS",
+    "PHP",
   ];
 
   return (
@@ -67,16 +66,16 @@ const AboutSection: React.FC = () => {
         </Grid>
         <Box pb={1}>
           <Typography>
-            Desenvolvedor Full Stack, React, Node.js, TypeScript, Vue.js,
-            JavaScript Apaixonado por transformar ideias em soluções digitais
-            escaláveis, atuo como desenvolvedor full stack com experiência
-            sólida. Domino frameworks modernos como React e Vue.js, além de
-            construir APIs robustas com Node.js e TypeScript. Tenho como foco a
-            criação de interfaces intuitivas, código limpo e performance
-            otimizada. 🚀 Já participei de projetos e aplicações, sempre
-            buscando inovação, colaboração e excelência técnica. Estou em
-            constante evolução, acompanhando as tendências do ecossistema e
-            contribuindo com boas práticas de desenvolvimento.
+            Desenvolvedor Full Stack, React, Node.js, TypeScript, JavaScript
+            Apaixonado por transformar ideias em soluções digitais escaláveis,
+            atuo como desenvolvedor full stack com experiência sólida. Domino
+            frameworks modernos como React, além de construir APIs robustas com
+            Node.js e TypeScript. Tenho como foco a criação de interfaces
+            intuitivas, código limpo e performance otimizada. 🚀 Já participei
+            de projetos e aplicações, sempre buscando inovação, colaboração e
+            excelência técnica. Estou em constante evolução, acompanhando as
+            tendências do ecossistema e contribuindo com boas práticas de
+            desenvolvimento.
           </Typography>
         </Box>
         <hr />
