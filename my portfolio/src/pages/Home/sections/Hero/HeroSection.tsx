@@ -2,7 +2,7 @@ import { Box, styled } from "@mui/material";
 import Avatar from "../../../../assets/images/Avatar.png";
 import { Container, Typography } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Grid } from "@mui/material";
 import StyledButton from "../../../../components/Styledbutton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
@@ -100,7 +100,7 @@ const Hero = () => {
                       window.open("https://wa.me/5583987774076", "_blank")
                     }
                   >
-                    <MailOutlineIcon />
+                    <WhatsAppIcon />
                     <Typography>CONTACT ME</Typography>
                   </StyledButton>
                 </Grid>
