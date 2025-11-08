@@ -25,7 +25,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Dijuan Construtora",
       subtitle: "November 2025",
-      srcImg: "",
+      srcImg: "/CV/dijuan-construtora.png",
       description:
         "Dijuan Construtora - Site institucional responsivo que apresenta os empreendimentos da construtora com foco em qualidade, segurança e modernidade. Desenvolvido para destacar projetos imobiliarios e facilitar o contato com clientes interessados",
       technologies: "React, Next.js, Tailwind CSS, Typescript",
