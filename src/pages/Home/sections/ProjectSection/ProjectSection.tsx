@@ -24,10 +24,10 @@ const ProjectsSection: React.FC = () => {
     },
     {
       title: "Dijuan Construtora",
-      subtitle: "November 2025 - November 2025",
+      subtitle: "November 2025",
       srcImg: "",
       description:
-        "Dijuan Construtora - Site institucional responsivo que apresenta os empreendimentos da construtora com foco em qualidade, segurança e modernidade. Desenvolvido para destacar projetos como o San Gardeno Residence e facilitar o contato com clientes interessados",
+        "Dijuan Construtora - Site institucional responsivo que apresenta os empreendimentos da construtora com foco em qualidade, segurança e modernidade. Desenvolvido para destacar projetos imobiliarios e facilitar o contato com clientes interessados",
       technologies: "React.js, Next.js, Tailwind CSS, Typescript",
       websiteURL: "https://dijuan-construtora.vercel.app/",
       codeURL:
