@@ -17,7 +17,7 @@ const ProjectsSection: React.FC = () => {
       subtitle: "August 2025 - September 2025",
       srcImg: "/CV/tasklist.png",
       description:
-        "Lista de tarefas - Este projeto é uma aplicação web simples e funcional de lista de tarefas, desenvolvida com React e Vite, O objetivo é oferecer uma interface intuitiva para que o usuário possa adicionar e visualizar tarefas de forma rápida e eficiente",
+        "Este projeto é uma aplicação web simples e funcional de lista de tarefas, desenvolvida com React e Vite, O objetivo é oferecer uma interface intuitiva para que o usuário possa adicionar e visualizar tarefas de forma rápida e eficiente",
       technologies: "REACT, TYPESCRIPT, JAVASCRIPT",
       websiteURL: "https://lista-de-tarefas-gilt-five.vercel.app/",
       codeURL: "https://github.com/emersondevfullstack1-pixel/lista-tarefas",
