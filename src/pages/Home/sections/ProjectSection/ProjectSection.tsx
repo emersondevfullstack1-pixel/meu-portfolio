@@ -18,7 +18,7 @@ const ProjectsSection: React.FC = () => {
       srcImg: "/CV/tasklist.png",
       description:
         "Este projeto é uma aplicação web simples e funcional de lista de tarefas, desenvolvida com React e Vite, O objetivo é oferecer uma interface intuitiva para que o usuário possa adicionar e visualizar tarefas de forma rápida e eficiente",
-      technologies: "REACT, TYPESCRIPT, JAVASCRIPT",
+      technologies: "React, Typescript, lucideIcon",
       websiteURL: "https://lista-de-tarefas-gilt-five.vercel.app/",
       codeURL: "https://github.com/emersondevfullstack1-pixel/lista-tarefas",
     },
@@ -28,7 +28,7 @@ const ProjectsSection: React.FC = () => {
       srcImg: "",
       description:
         "Dijuan Construtora - Site institucional responsivo que apresenta os empreendimentos da construtora com foco em qualidade, segurança e modernidade. Desenvolvido para destacar projetos imobiliarios e facilitar o contato com clientes interessados",
-      technologies: "React.js, Next.js, Tailwind CSS, Typescript",
+      technologies: "React, Next.js, Tailwind CSS, Typescript",
       websiteURL: "https://dijuan-construtora.vercel.app/",
       codeURL:
         "https://github.com/emersondevfullstack1-pixel/dijuan-construtora",
